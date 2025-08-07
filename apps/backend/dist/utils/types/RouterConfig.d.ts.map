@@ -1,0 +1,1 @@
+{"version":3,"file":"RouterConfig.d.ts","sourceRoot":"","sources":["../../../src/utils/types/RouterConfig.ts"],"names":[],"mappings":"AAAA,OAAO,EACL,qBAAqB,EACrB,oBAAoB,EACpB,sBAAsB,EACvB,MAAM,SAAS,CAAC;AAEjB,MAAM,MAAM,YAAY,GAAG;IACzB,qBAAqB;IACrB,sBAAsB,CAAC,oBAAoB,CAAC;CAC7C,CAAC"}

@@ -1,0 +1,16 @@
+{
+  "node": {
+    "40f562daf003f4f3b7287c5993fba840f31b72a103": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/apps/frontend/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/apps/frontend/src/actions/census.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}
