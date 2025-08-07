@@ -20,9 +20,12 @@
     "@sinclair/typebox": "^0.34.38",
     "fastify": "^5.4.0"
   },
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.10.0",
+    "@types/node": "^22.0.0",
     "@types/swagger-ui-express": "^4.1.8",
     "@typescript-eslint/eslint-plugin": "^6.13.0",
     "@typescript-eslint/parser": "^6.13.0",

@@ -1,6 +1,5 @@
 # Stage 1: Base image with Node.js
-FROM node:18-alpine AS base
-RUN apk add --no-cache libc6-compat
+FROM node:22-slim AS base
 WORKDIR /app
 
 # Stage 2: Install all dependencies (including dev dependencies for build)
@@ -30,23 +29,19 @@ COPY apps/frontend/package*.json ./apps/frontend/
 RUN npm run build:backend
 
 # Stage 4: Production runtime
-FROM node:18-alpine AS runner
+FROM gcr.io/distroless/nodejs22-debian12 AS runner
 WORKDIR /app
 
 ENV NODE_ENV=production
 ENV PORT=8000
 
-# Create non-root user
-RUN addgroup --system --gid 1001 nodejs && \
-    adduser --system --uid 1001 backend
-
 # Copy built application and production dependencies
-COPY --from=builder --chown=backend:nodejs /app/apps/backend/dist ./dist
-COPY --from=builder --chown=backend:nodejs /app/apps/backend/package*.json ./
-COPY --from=builder --chown=backend:nodejs /app/node_modules ./node_modules
+COPY --from=builder --chown=nonroot:nonroot /app/apps/backend/dist ./dist
+COPY --from=builder --chown=nonroot:nonroot /app/apps/backend/package*.json ./
+COPY --from=builder --chown=nonroot:nonroot /app/node_modules ./node_modules
 
-USER backend
+USER nonroot
 
 EXPOSE 8000
 
-CMD ["node", "dist/index.js"]
+CMD ["dist/index.js"]

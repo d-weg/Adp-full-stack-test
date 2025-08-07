@@ -10,7 +10,7 @@ interface TableRowProps {
 export default function TableRow({ row, index, showSexBreakdown, formatNumber }: TableRowProps) {
   return (
     <tr key={`${row.stateCode}-${index}`} className={`hover:bg-gray-50 ${row.failed ? 'bg-red-50' : ''}`}>
-      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-middle">
         <div className="flex items-center space-x-2">
           <span className={row.failed ? 'text-red-600' : ''}>{row.state}</span>
           {row.failed && (
@@ -25,15 +25,15 @@ export default function TableRow({ row, index, showSexBreakdown, formatNumber }:
       </td>
       {showSexBreakdown && (
         <>
-          <td className={`px-6 py-4 whitespace-nowrap text-sm ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
+          <td className={`px-6 py-4 whitespace-nowrap text-sm align-middle ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
             {row.failed ? 'Failed' : (row.maleEmployment ? formatNumber(row.maleEmployment) : 'N/A')}
           </td>
-          <td className={`px-6 py-4 whitespace-nowrap text-sm ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
+          <td className={`px-6 py-4 whitespace-nowrap text-sm align-middle ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
             {row.failed ? 'Failed' : (row.femaleEmployment ? formatNumber(row.femaleEmployment) : 'N/A')}
           </td>
         </>
       )}
-      <td className={`px-6 py-4 whitespace-nowrap text-sm ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
+      <td className={`px-6 py-4 whitespace-nowrap text-sm align-middle ${row.failed ? 'text-red-400' : 'text-gray-900'}`}>
         {row.failed ? 'Failed' : formatNumber(row.totalEmployment)}
       </td>
     </tr>

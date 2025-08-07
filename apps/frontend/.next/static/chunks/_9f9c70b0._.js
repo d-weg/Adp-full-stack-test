@@ -769,7 +769,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$src$2f$c
 function TableHeader(param) {
     let { showSexBreakdown, sortField, sortDirection, onSort } = param;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
-        className: "bg-gray-50",
+        className: "bg-gray-50 sticky top-0 z-10",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -943,7 +943,7 @@ function TableRow(param) {
         className: "hover:bg-gray-50 ".concat(row.failed ? 'bg-red-50' : ''),
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                className: "px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900",
+                className: "px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 align-middle",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex items-center space-x-2",
@@ -997,7 +997,7 @@ function TableRow(param) {
             showSexBreakdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                        className: "px-6 py-4 whitespace-nowrap text-sm ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
+                        className: "px-6 py-4 whitespace-nowrap text-sm align-middle ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
                         children: row.failed ? 'Failed' : row.maleEmployment ? formatNumber(row.maleEmployment) : 'N/A'
                     }, void 0, false, {
                         fileName: "[project]/apps/frontend/src/components/TableRow.tsx",
@@ -1005,7 +1005,7 @@ function TableRow(param) {
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                        className: "px-6 py-4 whitespace-nowrap text-sm ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
+                        className: "px-6 py-4 whitespace-nowrap text-sm align-middle ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
                         children: row.failed ? 'Failed' : row.femaleEmployment ? formatNumber(row.femaleEmployment) : 'N/A'
                     }, void 0, false, {
                         fileName: "[project]/apps/frontend/src/components/TableRow.tsx",
@@ -1015,7 +1015,7 @@ function TableRow(param) {
                 ]
             }, void 0, true),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                className: "px-6 py-4 whitespace-nowrap text-sm ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
+                className: "px-6 py-4 whitespace-nowrap text-sm align-middle ".concat(row.failed ? 'text-red-400' : 'text-gray-900'),
                 children: row.failed ? 'Failed' : formatNumber(row.totalEmployment)
             }, void 0, false, {
                 fileName: "[project]/apps/frontend/src/components/TableRow.tsx",
@@ -1136,12 +1136,12 @@ function EmploymentTable(param) {
         className: "space-y-4",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white rounded-lg shadow-md overflow-hidden",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "overflow-x-auto max-h-[70vh]",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
-                        className: "min-w-full divide-y divide-gray-200",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$src$2f$components$2f$TableHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "overflow-x-auto overflow-y-auto max-h-[70vh]",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                    className: "min-w-full divide-y divide-gray-200",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$src$2f$components$2f$TableHeader$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             showSexBreakdown: showSexBreakdown,
                             sortField: sortField,
                             sortDirection: sortDirection,
@@ -1150,22 +1150,8 @@ function EmploymentTable(param) {
                             fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
                             lineNumber: 105,
                             columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                        lineNumber: 104,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                    lineNumber: 103,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "overflow-x-auto overflow-y-auto max-h-[60vh]",
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
-                        className: "min-w-full divide-y divide-gray-200",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                             className: "bg-white divide-y divide-gray-200",
                             children: sortedData.map((row, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$apps$2f$frontend$2f$src$2f$components$2f$TableRow$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     row: row,
@@ -1174,26 +1160,26 @@ function EmploymentTable(param) {
                                     formatNumber: formatNumber
                                 }, "".concat(row.stateCode, "-").concat(index), false, {
                                     fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 113,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                            lineNumber: 115,
+                            lineNumber: 111,
                             columnNumber: 13
                         }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                        lineNumber: 114,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
-                    lineNumber: 113,
-                    columnNumber: 9
+                    lineNumber: 104,
+                    columnNumber: 11
                 }, this)
-            ]
-        }, void 0, true, {
+            }, void 0, false, {
+                fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
+                lineNumber: 103,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
             fileName: "[project]/apps/frontend/src/components/EmploymentTable.tsx",
             lineNumber: 102,
             columnNumber: 7

@@ -485,8 +485,17 @@
     position: relative;
   }
 
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
+  }
+
+  .top-0 {
+    top: calc(var(--spacing) * 0);
   }
 
   .right-0 {
@@ -891,6 +900,10 @@
 
   .text-left {
     text-align: left;
+  }
+
+  .align-middle {
+    vertical-align: middle;
   }
 
   .text-3xl {

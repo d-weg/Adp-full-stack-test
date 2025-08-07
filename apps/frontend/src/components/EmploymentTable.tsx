@@ -100,7 +100,7 @@ export default function EmploymentTable({
   return (
     <div className="space-y-4">
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="overflow-x-auto max-h-[70vh]">
+        <div className="overflow-x-auto overflow-y-auto max-h-[70vh]">
           <table className="min-w-full divide-y divide-gray-200">
             <TableHeader
               showSexBreakdown={showSexBreakdown}
@@ -108,10 +108,6 @@ export default function EmploymentTable({
               sortDirection={sortDirection}
               onSort={handleSort}
             />
-          </table>
-        </div>
-        <div className="overflow-x-auto overflow-y-auto max-h-[60vh]">
-          <table className="min-w-full divide-y divide-gray-200">
             <tbody className="bg-white divide-y divide-gray-200">
               {sortedData.map((row, index) => (
                 <TableRow

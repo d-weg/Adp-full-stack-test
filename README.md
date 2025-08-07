@@ -102,21 +102,33 @@ docker build -f apps/frontend/Dockerfile -t adp-frontend .
 
 ### Environment Variables
 
-Optional environment variables:
+The application supports several environment variables for customization, **all with sensible defaults**:
 
+#### Frontend Environment Variables (Optional)
 ```bash
 # Frontend (.env.local)
-NEXT_PUBLIC_API_URL=http://localhost:8000
-
-# Backend (.env)
-PORT=8000
-HOST=0.0.0.0
+NEXT_PUBLIC_API_URL=http://localhost:8000  # Default: http://localhost:8000
 ```
+
+#### Backend Environment Variables (Optional)
+```bash
+# Backend (.env)
+PORT=8000                    # Default: 8000
+HOST=0.0.0.0                # Default: 0.0.0.0
+CENSUS_API_BASE=https://api.census.gov/data/timeseries/qwi/sa  # Default: https://api.census.gov/data/timeseries/qwi/sa
+```
+
+#### Default Behavior
+- **No configuration required**: The app works out of the box without any environment variables
+- **Frontend**: Automatically connects to `http://localhost:8000` for local development
+- **Backend**: Runs on port `8000` with host `0.0.0.0` and uses the official Census API
+- **Docker**: Environment variables are pre-configured in `docker-compose.yml`
 
 **Docker Environment Variables:**
 - Backend runs on port 8000 in containers (internal access only)
-- Frontend automatically configured to connect to backend:8000 in Docker network
+- Frontend automatically configured to connect to `backend:8000` in Docker network
 - `NEXT_PUBLIC_API_URL=http://backend:8000` (uses internal service name for container communication)
+- All URLs can be customized by modifying the `docker-compose.yml` file
 
 ## Architecture
 
@@ -200,6 +212,11 @@ adp/ (Turbo Monorepo)
 4. **Docker vs Local Deployment**:
    - **Chosen**: Both options supported
    - **Trade-off**: Docker provides consistency across environments but adds complexity
+
+5. **API Architecture vs Next.js Server Actions**:
+   - **Chosen**: Separate API backend with dedicated Fastify server
+   - **Alternative**: Could have implemented all logic using Next.js server actions or API routes
+   - **Trade-off**: As this is a full-stack coding exercise, I chose to demonstrate both frontend and backend skills by creating a dedicated API. However, for a real-world scenario, implementing this purely with Next.js server actions would reduce complexity, eliminate network latency between services, simplify deployment, provide better type safety with shared code, and offer seamless server-client integration. The separate API approach offers better separation of concerns, independent scaling, and reusability across different frontends.
 
 ### Technical Stack
 
